@@ -32,7 +32,7 @@ def downloadAllInstancesFromPatients():
     # were not consistent or were to change in the future, this file would need to be addressed
     
     patient_list_file = sys.argv[1]
-    xlsx_data = pd.read_excel(patient_list_file, usecols="A", sheet_name="Tableau croisé dyn.")#, skiprows=4)
+    xlsx_data = pd.read_excel(patient_list_file, usecols="A", sheet_name="Tableau croisé dyn.")
 
     patientIDs = xlsx_data["Unnamed: 0"].values.tolist()
     while(patientIDs[0] != "Étiquettes de lignes"):
@@ -59,6 +59,8 @@ def downloadAllInstancesFromPatients():
     # For debug purpose, check number of found patients 
     # print("Size list: ", len(patient_list))
 
+    # Uncommenting all the zip-related lines will, in addition to downloading the files in separate folders,
+    # also create zip archives with the same data neatly organised. Could be added as --option
     inst = 0 #
     for patient in tqdm(patient_list):
         pID = patient.get_main_information()['MainDicomTags']['PatientID']

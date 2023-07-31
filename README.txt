@@ -28,7 +28,7 @@ filtering, the one containing the list of patients.
 
 RESULT
 
-In theory, if parsing was executed properly, all the selected patients' data (in full) will be downloaded
+In theory, if parsing was executed properly, all the selected patients' data (in full) was downloaded
 into a folder named "Output" created in the working directory, generally the one where the python
-script reside. If necessary an option can be added to give the desired output directory as argument
+script resides. If necessary an option can be added to give the desired output directory as argument
 to the script.
