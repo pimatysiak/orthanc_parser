@@ -19,7 +19,7 @@ USAGE
 
 In a terminal, call the following command:
 
-download_patients_xlsx.py orthanc_spreadsheet.xlsx
+python download_patients_xlsx.py orthanc_spreadsheet.xlsx
 
 Where orthanc_spreadsheet.xlsx is the full file used to compute the "tableau croisé dynamique"
 The script will automatically parse the sheet in the file containing the result of the manual
