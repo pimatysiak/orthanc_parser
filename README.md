@@ -1,4 +1,4 @@
-PREPARATION/INSTALLATION
+PREPARATION / INSTALLATION
 
 Required python packages to be installed additionally:
 
@@ -10,6 +10,7 @@ Before running ensure these files are all in the working folder:
 
 - download_patients_xlsl.py
 - encoding_orthanc.py
+
 (more to come for additional download option, e.g. specific instances per patient)
 
 Additionally ensure that the Orthanc server is already running (assuming localhost:8042)
@@ -21,7 +22,7 @@ In a terminal, call the following command:
 
 python download_patients_xlsx.py <orthanc_spreadsheet.xlsx>
 
-Where <orthanc_spreadsheet.xlsx> is the full file used to compute the "tableau croisé dynamique"
+Where <orthanc_spreadsheet.xlsx> is the full file used to compute the "tableau croisé dynamique".
 The script will automatically parse the sheet in the file containing the result of the manual
 filtering, the one containing the list of patients.
 
