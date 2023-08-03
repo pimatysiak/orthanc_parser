@@ -19,7 +19,7 @@ def downloadAllInstancesFromPatients():
     # Read patient list file (given as argument) and parse each line to obtain list of patients
     if len(sys.argv) < 2:
         print("Error: need to input patient list file as argument")
-        print("Example call: download_patients_xlsx.py list.xlsx")
+        print("Example call: python download_patients_xlsx.py orthanc_db.xlsx")
         return  
 
     # Open patient list file and read/parse its data with pandas
@@ -64,7 +64,7 @@ def downloadAllInstancesFromPatients():
     inst = 0 #
     for patient in tqdm(patient_list):
         pID = patient.get_main_information()['MainDicomTags']['PatientID']
-        # patient_zip = zipfile.ZipFile("dump/" + pID + '.gz', mode='w', compression = zipfile.ZIP_DEFLATED)
+        # patient_zip = zipfile.ZipFile("Output/" + pID + '.gz', mode='w', compression = zipfile.ZIP_DEFLATED)
         # patient_zip.mkdir(pID + '/', 'w')
         for study in patient._studies:
             stID = study.get_main_information()['MainDicomTags']['StudyInstanceUID']
